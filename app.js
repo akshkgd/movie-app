@@ -76,6 +76,9 @@ const User = mongoose.model('User', userSchema);
 const Task = mongoose.model('ck-task', taskSchema);
 // routes
 app.get('/', (req, res) => {
+    res.render('index')
+})
+app.get('/login', (req, res) => {
     res.render('login')
 })
 app.post('/login', async (req, res) => {
